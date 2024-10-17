@@ -52,14 +52,16 @@ useSeoMeta({
 </script>
 
 <template>
-    <PagesListBanner
-        :title="data.page.listagem.titulo"
-        :text="data.page.listagem.texto"
-        :image="data.page.listagem.foto.sourceUrl"
-    />
-    <PagesListItems
-        :list="data[props.cpt].nodes"
-        :pet="props.cpt === 'pets'"
-        :button="data.page.listagem.botao"
-    />
+    <div>
+        <PagesListBanner
+            :title="data.page.listagem.titulo"
+            :text="data.page.listagem.texto"
+            :image="data.page.listagem.foto.sourceUrl"
+        />
+        <PagesListItems
+            :list="data[props.cpt].nodes"
+            :pet="props.cpt === 'pets'"
+            :button="data.page.listagem.botao"
+        />
+    </div>
 </template>

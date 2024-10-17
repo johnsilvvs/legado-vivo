@@ -49,20 +49,22 @@ const { data, refresh, pending } = await useFetch(
 </script>
 
 <template>
-  <LayoutNav
-    :logo="data.gerais.edges[0].node.geral.logo.sourceUrl"
-    :menu="data.menuTopo.menuItems.nodes"
-  />
-  <slot />
-  <LayoutCookies
-    :text="data.gerais.edges[0].node.geral.cookiesTexto"
-    :button="data.gerais.edges[0].node.geral.cookiesBotao"
-  />
-  <LayoutFooter
-    :logo="data.gerais.edges[0].node.geral.logo.sourceUrl"
-    :menu="data.menuRodape.menuItems.nodes"
-    :whatsapp="data.gerais.edges[0].node.geral.whatsapp"
-    :phone="data.gerais.edges[0].node.geral.telefone"
-    :email="data.gerais.edges[0].node.geral.email"
-  />
+  <div>
+    <LayoutNav
+      :logo="data.gerais.edges[0].node.geral.logo.sourceUrl"
+      :menu="data.menuTopo.menuItems.nodes"
+    />
+    <slot />
+    <LayoutCookies
+      :text="data.gerais.edges[0].node.geral.cookiesTexto"
+      :button="data.gerais.edges[0].node.geral.cookiesBotao"
+    />
+    <LayoutFooter
+      :logo="data.gerais.edges[0].node.geral.logo.sourceUrl"
+      :menu="data.menuRodape.menuItems.nodes"
+      :whatsapp="data.gerais.edges[0].node.geral.whatsapp"
+      :phone="data.gerais.edges[0].node.geral.telefone"
+      :email="data.gerais.edges[0].node.geral.email"
+    />
+  </div>
 </template>

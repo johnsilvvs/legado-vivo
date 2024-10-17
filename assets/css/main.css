@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  ::selection {
+    @apply bg-purple text-white;
+  } 
+  * {
+    @apply duration-300 text-black;
+  }
+  html {
+    @apply overflow-x-hidden scroll-smooth;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  figure {
+    @apply m-0;
+  }
+  img {
+    @apply block max-w-full;
+  }
+  h1 {
+    &,
+    & * {
+      @apply !text-[64px] sm:!text-[40px] !font-bold;
+    }
+  }
+  h2 {
+    &,
+    & * {
+      @apply !text-[56px] sm:!text-[36px] !font-bold;
+    }
+  }
+  h3 {
+    &,
+    & * {
+      @apply !text-[48px] sm:!text-[32px] !font-bold;
+    }
+  }
+  h4 {
+    &,
+    & * {
+      @apply !text-[40px] sm:!text-[28px] !font-bold;
+    }
+  }
+  h5 {
+    &,
+    & * {
+      @apply !text-[32px] sm:!text-[24px] !font-bold;
+    }
+  }
+  h6 {
+    &,
+    & * {
+      @apply !text-[24px] sm:!text-[20px] !font-bold;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &,
+    & * {
+      @apply !leading-[100%];
+      strong,
+      b {
+        @apply !text-purple;
+      }
+      p {
+        @apply text-black;
+      }
+    }
+  }
+  p {
+    @apply text-lg font-normal leading-[160%] text-gray;
+    a {
+      @apply !font-bold underline !text-purple;
+    }
+    strong,
+    b {
+      @apply !font-bold ;
+    }
+  }
+}
+
+:root {
+  font-family: Cabinet Grotesk, sans-serif;
+}

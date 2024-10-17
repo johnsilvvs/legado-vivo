@@ -30,17 +30,19 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="pt-[180px] sm:pt-32 pb-16 sm:pb-10 mb-16 sm:mb-10 bg-purple">
-    <LayoutContainer>
-      <h1 class="text-white text-center">{{ data.page.title }}</h1>
-    </LayoutContainer>
-  </section>
+  <div>
+    <section class="pt-[180px] sm:pt-32 pb-16 sm:pb-10 mb-16 sm:mb-10 bg-purple">
+      <LayoutContainer>
+        <h1 class="text-white text-center">{{ data.page.title }}</h1>
+      </LayoutContainer>
+    </section>
 
-  <section class="p-policy-content">
-    <LayoutContainer class="!max-w-[900px]">
-      <div v-html="data.page.content"></div>
-    </LayoutContainer>
-  </section>
+    <section class="p-policy-content">
+      <LayoutContainer class="!max-w-[900px]">
+        <div v-html="data.page.content"></div>
+      </LayoutContainer>
+    </section>
+  </div>
 </template>
 
 <style lang="postcss">

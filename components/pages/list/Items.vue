@@ -26,7 +26,7 @@ defineProps({
                         transparency
                         full
                         blank
-                        :href="pet ? `/pets/${i.slug}` : `/obituario/${i.slug}`"
+                        :href="pet ? `/pets/${i.slug}` : `/memoriais/${i.slug}`"
                     >
                         {{ button }}
                         <VectorsUtilsArrowNewLayer />

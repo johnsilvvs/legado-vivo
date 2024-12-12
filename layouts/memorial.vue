@@ -17,7 +17,6 @@ const { data, refresh, pending } = await useFetch(
                 }
                 memorial {
                     sobreTitulo
-                    sobreTexto3
                     sobreTexto2
                     sobreTexto1
                     sobreFrase
@@ -67,7 +66,6 @@ useSeoMeta({
             :text1="data[props.cpt].memorial.sobreTexto1"
             :image="data[props.cpt].memorial.sobreFoto.sourceUrl"
             :text2="data[props.cpt].memorial.sobreTexto2"
-            :text3="data[props.cpt].memorial.sobreTexto3"
             :phrase="data[props.cpt].memorial.sobreFrase"
             :pet="props.cpt === 'pet'"
         />

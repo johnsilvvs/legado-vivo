@@ -12,15 +12,17 @@ const current = ref(0)
         <section class="pt-32 sm:pt-20">
             <LayoutContainer>
                 <h2 class="text-center mb-16 sm:mb-10">Galeria de Fotos</h2>
-                <ul class="grid grid-cols-4 gap-6 sm:grid-cols-2 sm:gap-4">
+                <ul class="flex flex-wrap justify-center gap-6 sm:gap-4">
                     <li
                         v-for="i, index in images"
                         :key="index"
+                        style="max-width: calc(25% - 20px);"
+                        class="sm:!max-w-full w-full h-[320px] sm:h-auto"
                     >
                         <button
                             @click="open = true, current = index"
                             type="button"
-                            class="relative h-[265px] sm:h-auto overflow-hidden rounded-[12px] before:absolute before:top-0 before:left-0 before:bg-purple before:opacity-0 before:w-full before:h-full hover:before:opacity-80 group"
+                            class="block w-full relative h-full overflow-hidden rounded-[12px] before:absolute before:top-0 before:left-0 before:bg-purple before:opacity-0 before:w-full before:h-full hover:before:opacity-80 group"
                         >
                             <img :src="i.foto.sourceUrl" alt="Foto" class="w-full h-full object-cover">
                             <VectorsMemorialZoom class="absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] opacity-0 group-hover:opacity-100" />
@@ -52,7 +54,7 @@ const current = ref(0)
 
             <LayoutContainer class="relative z-20 flex items-center justify-center">
                 <img
-                    class="max-h-full"
+                    class="max-h-[90vh] sm:max-h-auto sm:max-w-[80%]"
                     :src="images[current].foto.sourceUrl"
                     alt="Foto"
                 />

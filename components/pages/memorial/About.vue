@@ -4,7 +4,6 @@ defineProps({
     text1: String,
     image: String,
     text2: String,
-    text3: String,
     phrase: String,
     pet: Boolean
 })
@@ -13,13 +12,14 @@ defineProps({
 <template>
     <section>
         <LayoutContainer>
-            <h2 v-if="title" v-html="title" class="mb-8 sm:mb-4 text-center"></h2>
-            <p v-if="text1" v-html="text1" class="mb-20 sm:mb-12 text-center"></p>
-            <img v-if="image" :src="image" class="w-full rounded-[24px] sm:rounded-[16px]" alt="Foto">
-            <div v-if="text2 || text3" class="flex gap-16 sm:flex-col sm:gap-6 pt-20 sm:pt-12">
-                <p v-if="text2" v-html="text2"></p>
-                <p v-if="text3" v-html="text3"></p>
+            <div class="flex justify-between gap-16 sm:flex-col sm:gap-8">
+                <div class="w-full">
+                    <h2 v-if="title" v-html="title" class="mb-8 sm:mb-4"></h2>
+                    <div v-if="text1" v-html="text1"></div>
+                </div>
+                <img v-if="image" :src="image" class="max-w-[560px] w-full rounded-[24px] sm:rounded-[16px]" alt="Foto">
             </div>
+            <section v-if="text2" v-html="text2" class="pt-20 sm:pt-12"></section>
         </LayoutContainer>
         <div v-if="phrase" class="border-t border-b border-light-gray py-8 mt-32 sm:mt-20">
             <LayoutContainer>

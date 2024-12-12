@@ -78,7 +78,7 @@ const year = new Date().getFullYear()
       </ul>
       <div class="flex justify-between py-8 sm:py-6 sm:block border-t border-[rgba(255,255,255,.32)]">
         <p class="text-white font-light text-sm sm:text-center">Legado Vivo | Todos os direitos reservados © {{ year }}</p>
-        <p class="text-white font-light text-sm sm:text-center">Desenvolvido por <a class="text-white" href="https://www.eficazti.com.br/" target="_blank">Eficaz TI</a></p>
+        <p class="text-white font-light text-sm sm:text-center">Desenvolvido por <a class="!text-white" href="https://www.eficazti.com.br/" target="_blank">Eficaz TI</a></p>
       </div>
     </LayoutContainer>
   </footer>
